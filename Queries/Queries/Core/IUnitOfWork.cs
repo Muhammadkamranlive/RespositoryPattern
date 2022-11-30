@@ -7,7 +7,7 @@ namespace Queries.Core
     {
         ICourseRepository Courses { get; }
         ITeacherRepository Teacher { get; }
-        
+        IUserRespository User { get; }
         int Complete();
     }
 }

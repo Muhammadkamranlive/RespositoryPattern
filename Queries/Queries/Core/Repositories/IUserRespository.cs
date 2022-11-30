@@ -9,7 +9,7 @@ namespace Queries.Core.Repositories
 {
     public interface IUserRespository:IRepository<User>
     {
-        void AddChild(Teachers teachers);
+        
     }
 
 }

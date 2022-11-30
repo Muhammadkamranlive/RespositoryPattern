@@ -57,9 +57,9 @@
     <Compile Include="Core\Domain\Student.cs" />
     <Compile Include="Core\Domain\User.cs" />
     <Compile Include="Core\Repositories\IUserRespository.cs" />
-    <Compile Include="Migrations\202211271531192_LearningModel.cs" />
-    <Compile Include="Migrations\202211271531192_LearningModel.designer.cs">
-      <DependentUpon>202211271531192_LearningModel.cs</DependentUpon>
+    <Compile Include="Migrations\202211300952482_LearningModel.cs" />
+    <Compile Include="Migrations\202211300952482_LearningModel.designer.cs">
+      <DependentUpon>202211300952482_LearningModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\Repositories\TeacherRepository.cs" />
@@ -86,8 +86,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202211271531192_LearningModel.resx">
-      <DependentUpon>202211271531192_LearningModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202211300952482_LearningModel.resx">
+      <DependentUpon>202211300952482_LearningModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

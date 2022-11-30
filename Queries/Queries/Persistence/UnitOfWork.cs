@@ -12,16 +12,15 @@ namespace Queries.Persistence
         {
             _context = context;
             Courses = new CourseRepository(_context);
-        
             Teacher = new TeacherRepository(_context);
+            User= new UsersRepository(_context);
             
         }
 
         public ICourseRepository Courses { get; private set; }
-
         public ITeacherRepository Teacher { get; private set; }
 
-       
+        public IUserRespository User { get; private set; }
 
         public int Complete()
         {

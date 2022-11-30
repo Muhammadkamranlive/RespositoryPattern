@@ -9,13 +9,16 @@ using System.Threading.Tasks;
 
 namespace Queries.Persistence.Repositories
 {
-    public class UsersRepository
+    public class UsersRepository:Repository<User> ,IUserRespository
     {
-        public UsersRepository(LearningContext context) 
+        public UsersRepository(LearningContext context) :base(context)
         {
 
         }
 
-        
+        public LearningContext PlutoContext
+        {
+            get { return Context as LearningContext; }
+        }
     }
 }

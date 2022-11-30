@@ -53,24 +53,15 @@ namespace Queries
 
             // Example 3
 
-            #region Add Students
-            var user = new User() { Name="1312",Age="232",Address="dddd",Email="fff",Phone="34343"};
-            var Students = new Dictionary<string, Student>
-                {
-                    {"Muhammad", new Student (user) },
-                   
+            unitOfWork.User.Add(new Teachers() { Name = "Muhamad", Address = "fsd" });
 
-                };
 
-            #endregion
-            var Teacher = new Teachers(user) { Students=Students.Values};
-            unitOfWork.Teacher.Add(Teacher);
-             
+
             //Example4
             //var teachers = unitOfWork.Teachers.GetAuthorWithCourses(1);
             //unitOfWork.Courses.RemoveRange(teachers.Courses);
             //unitOfWork.Teachers.Remove(teachers);
-            //unitOfWork.Complete();
+            unitOfWork.Complete();
             Console.ReadKey();
 
         }

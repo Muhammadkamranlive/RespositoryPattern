@@ -43,18 +43,15 @@
                 .Index(t => t.Id);
             
             CreateTable(
-                "dbo.Students",
+                "dbo.Users",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.Teachers",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Age = c.String(),
+                        Address = c.String(),
+                        Email = c.String(),
+                        Phone = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -101,8 +98,8 @@
                         Student_Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => new { t.Teachers_Id, t.Student_Id })
-                .ForeignKey("dbo.Teachers", t => t.Teachers_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Students", t => t.Student_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Teachers", t => t.Teachers_Id)
+                .ForeignKey("dbo.Students", t => t.Student_Id)
                 .Index(t => t.Teachers_Id)
                 .Index(t => t.Student_Id);
             
@@ -119,10 +116,32 @@
                 .Index(t => t.Tag_Id)
                 .Index(t => t.Course_Id);
             
+            CreateTable(
+                "dbo.Students",
+                c => new
+                    {
+                        Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Users", t => t.Id)
+                .Index(t => t.Id);
+            
+            CreateTable(
+                "dbo.Teachers",
+                c => new
+                    {
+                        Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Users", t => t.Id)
+                .Index(t => t.Id);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.Teachers", "Id", "dbo.Users");
+            DropForeignKey("dbo.Students", "Id", "dbo.Users");
             DropForeignKey("dbo.TagCourses", "Course_Id", "dbo.Courses");
             DropForeignKey("dbo.TagCourses", "Tag_Id", "dbo.Tags");
             DropForeignKey("dbo.TeachersStudents", "Student_Id", "dbo.Students");
@@ -133,6 +152,8 @@
             DropForeignKey("dbo.StudentCourses", "Student_Id", "dbo.Students");
             DropForeignKey("dbo.Covers", "Id", "dbo.Courses");
             DropForeignKey("dbo.Courses", "Category_Id", "dbo.Categories");
+            DropIndex("dbo.Teachers", new[] { "Id" });
+            DropIndex("dbo.Students", new[] { "Id" });
             DropIndex("dbo.TagCourses", new[] { "Course_Id" });
             DropIndex("dbo.TagCourses", new[] { "Tag_Id" });
             DropIndex("dbo.TeachersStudents", new[] { "Student_Id" });
@@ -143,13 +164,14 @@
             DropIndex("dbo.StudentCourses", new[] { "Student_Id" });
             DropIndex("dbo.Covers", new[] { "Id" });
             DropIndex("dbo.Courses", new[] { "Category_Id" });
+            DropTable("dbo.Teachers");
+            DropTable("dbo.Students");
             DropTable("dbo.TagCourses");
             DropTable("dbo.TeachersStudents");
             DropTable("dbo.TeachersCourses");
             DropTable("dbo.StudentCourses");
             DropTable("dbo.Tags");
-            DropTable("dbo.Teachers");
-            DropTable("dbo.Students");
+            DropTable("dbo.Users");
             DropTable("dbo.Covers");
             DropTable("dbo.Courses");
             DropTable("dbo.Categories");

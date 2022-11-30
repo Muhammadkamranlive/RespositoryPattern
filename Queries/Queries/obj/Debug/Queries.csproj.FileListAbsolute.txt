@@ -45,3 +45,18 @@ E:\C#\3. C# Advanced Topics - Prepare for Technical Interviews\RespositoryPatter
 E:\C#\3. C# Advanced Topics - Prepare for Technical Interviews\RespositoryPattern-master_2\RespositoryPattern-master\Queries\Queries\obj\Debug\Queries.csproj.CopyComplete
 E:\C#\3. C# Advanced Topics - Prepare for Technical Interviews\RespositoryPattern-master_2\RespositoryPattern-master\Queries\Queries\obj\Debug\Queries.Migrations.LearningModel.resources
 E:\C#\3. C# Advanced Topics - Prepare for Technical Interviews\RespositoryPattern-master_2\RespositoryPattern-master\Queries\Queries\obj\Debug\Queries.csproj.GenerateResource.cache
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\bin\Debug\Queries.exe.config
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\bin\Debug\Queries.exe
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\bin\Debug\Queries.pdb
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\bin\Debug\EntityFramework.dll
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\bin\Debug\EntityFramework.xml
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\obj\Debug\Queries.csproj.AssemblyReference.cache
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\obj\Debug\Queries.csproj.SuggestedBindingRedirects.cache
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\obj\Debug\Queries.csproj.CoreCompileInputs.cache
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\obj\Debug\Queries.csproj.CopyComplete
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\obj\Debug\Queries.exe
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\obj\Debug\Queries.pdb
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\obj\Debug\Queries.Migrations.LearningModel.resources
+D:\C#\Repository with Inheritance\RespositoryPattern\Queries\Queries\obj\Debug\Queries.csproj.GenerateResource.cache

@@ -19,8 +19,7 @@ namespace Queries.Persistence.Repositories
 
         public TEntity Get(int id)
         {
-            // Here we are working with a DbContext, not LearningContext. So we don't have DbSets 
-            // such as Courses or Teachers, and we need to use the generic Set() method to access them.
+      
             return Context.Set<TEntity>().Find(id);
         }
 
